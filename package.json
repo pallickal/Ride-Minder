@@ -1,0 +1,34 @@
+{
+  "name": "rideminder",
+  "version": "0.0.1",
+  "description": "Track your fuel economy. Set a maintenance schedule, and receive reminders when due. Document repairs and service. Plan broader upgrades with a build sheet - showing detailed notes (text and photographs), costs broken down, along with part model/category specific bookmarks for saving useful information like forum posts/vendors. When parts of a build sheet are completed, they are conveniently entered into the build history for a vehicle. Track individual vehicle costs broken down by parts of a build, routine maintenance, repairs, or re-fueling. You may attach photos of receipts to any of these records as documentation.",
+  "main": "app/client.js",
+  "scripts": {
+    "test": "mocha src/client/app/index.test.js --compilers js:babel-register"
+  },
+  "author": "Lindsay Pallickal",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "babel-loader": "^6.2.4",
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-react": "^6.5.0",
+    "babel-register": "^6.9.0",
+    "chai": "^3.5.0",
+    "deep-freeze": "0.0.1",
+    "karma": "^1.1.1",
+    "karma-chrome-launcher": "^1.0.1",
+    "karma-cli": "^1.0.1",
+    "karma-mocha": "^1.1.1",
+    "karma-sourcemap-loader": "^0.3.7",
+    "karma-webpack": "^1.7.0",
+    "mocha": "^2.5.3",
+    "webpack": "^1.13.1"
+  },
+  "dependencies": {
+    "react": "^15.2.0",
+    "react-dom": "^15.2.0",
+    "react-redux": "^4.4.5",
+    "react-router": "^2.4.1",
+    "redux": "^3.5.2"
+  }
+}
