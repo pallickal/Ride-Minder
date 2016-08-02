@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router';
 import VehicleForm from './components/VehicleForm'
-import store from './store.js';
 
 const Vehicle = React.createClass({
   render: function() {
@@ -17,7 +16,7 @@ const Vehicle = React.createClass({
 
 const Vehicles = React.createClass({
   componentDidMount: function() {
-    this.unsubscribe = store.subscribe( () => this.forceUpdate() );
+    this.unsubscribe = this.context.store.subscribe( () => this.forceUpdate() );
   },
   componentWillUnmount: function() {
     this.unsubscribe();
@@ -25,11 +24,11 @@ const Vehicles = React.createClass({
   render: function() {
     console.log('in Vehicles render');
 
-    const state = store.getState();
+    const state = this.context.store.getState();
 
     console.log(state);
     var vehicleNodes = state.map(
-      (vehicle, index) => {	return (<Vehicle key={index} {...vehicle} />) }
+      (vehicle, index) => { return (<Vehicle key={index} {...vehicle} />) }
     );
     return (
       <div>
@@ -40,6 +39,9 @@ const Vehicles = React.createClass({
     );
   }
 });
+Vehicles.contextTypes = {
+  store: React.PropTypes.object
+};
 
 const VehicleDetails = React.createClass({
   render: function() {
