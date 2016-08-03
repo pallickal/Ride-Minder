@@ -1,18 +1,9 @@
-import {should} from 'chai';
+import { should } from 'chai';
 var expect = require('chai').expect;
 import deepFreeze from 'deep-freeze';
-// var vehicles = require('./reducers');
 import vehicles from './vehicles';
 
 should();
-
-console.log('vehicles is -');
-console.log(vehicles);
-describe('starwars-names', function() {
-  it('should work!', function() {
-    expect(true).to.be.true;
-  });
-});
 
 describe('vehicles reducer', function() {
   it('should return default state', function(done) {
@@ -22,7 +13,7 @@ describe('vehicles reducer', function() {
 
   it('should add a vehicle', (done) => {
     const state_before = [];
-    const state_after = [
+    const expected_state_after = [
       {
         id: 1,
         vin: '1JZ2093KS20320931',
@@ -47,7 +38,7 @@ describe('vehicles reducer', function() {
 
     deepFreeze(state_before);
 
-    const actual_state_after = vehicles(state_before,
+    const state_after = vehicles(state_before,
       {
         type: 'ADD_VEHICLE',
         vin: '1JZ2093KS20320931',
@@ -59,7 +50,7 @@ describe('vehicles reducer', function() {
       }
     );
 
-    actual_state_after.should.deep.equal(state_after);
+    state_after.should.deep.equal(expected_state_after);
     done();
   });
 
