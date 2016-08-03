@@ -1,4 +1,5 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import { Link } from 'react-router';
 import VehicleForm from './components/VehicleForm'
 
@@ -14,20 +15,9 @@ const Vehicle = React.createClass({
   }
 });
 
-const Vehicles = React.createClass({
-  componentDidMount: function() {
-    this.unsubscribe = this.context.store.subscribe( () => this.forceUpdate() );
-  },
-  componentWillUnmount: function() {
-    this.unsubscribe();
-  },
+let Vehicles = React.createClass({
   render: function() {
-    console.log('in Vehicles render');
-
-    const state = this.context.store.getState();
-
-    console.log(state);
-    var vehicleNodes = state.map(
+    var vehicleNodes = this.props.vehicles.map(
       (vehicle, index) => { return (<Vehicle key={index} {...vehicle} />) }
     );
     return (
@@ -39,9 +29,14 @@ const Vehicles = React.createClass({
     );
   }
 });
-Vehicles.contextTypes = {
-  store: React.PropTypes.object
+
+const mapVehiclesStateToProps = (state) => {
+  return {
+    vehicles: state
+  }
 };
+
+Vehicles = connect(mapVehiclesStateToProps)(Vehicles);
 
 const VehicleDetails = React.createClass({
   render: function() {
