@@ -22,6 +22,7 @@ let Vehicles = React.createClass({
     );
     return (
       <div>
+      <VehicleForm />
       <h1>Vehicle List</h1>
       {vehicleNodes}
       {this.props.children}

@@ -13,7 +13,6 @@ var routes = (
         <Route path="/vehicleDetails/:_id" component={VehicleDetails} />
         <Route path="vehicles" component={Vehicles} />
         <Route path="vehicle" component={Vehicle} />
-        <Route path="create" component={VehicleForm} />
       </Route>
     </Router>
   </Provider>
