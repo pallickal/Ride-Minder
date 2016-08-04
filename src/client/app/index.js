@@ -18,12 +18,4 @@ var routes = (
   </Provider>
 );
 
-var renderApp = () => {
-  console.log("in render!!");
-  render(routes, document.getElementById('app'));
-}
-
-renderApp();
-
-store.subscribe(renderApp);
-console.log('it works!');
+render(routes, document.getElementById('app'));
