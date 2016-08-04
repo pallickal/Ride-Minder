@@ -1,4 +1,5 @@
 import React from 'react';
+import { Form, Input, Button } from 'stardust';
 import store from '../store'
 
 store.dispatch({
@@ -42,25 +43,30 @@ const VehicleForm = React.createClass({
   },
   render: function() {
     return (
-      <div>
-        <form>
-          <label>Name:</label>
-          <input type='text' name='name' value={this.state.name} onChange={this.handleChange}></input><br/>
-          <label>Year:</label>
-          <input type='text' name='year' value={this.state.year} onChange={this.handleChange}></input><br/>
-          <label>Make:</label>
-          <input type='text' name='make' value={this.state.make} onChange={this.handleChange}></input><br/>
-          <label>Model:</label>
-          <input type='text' name='model' value={this.state.model} onChange={this.handleChange}></input><br/>
-          <label>Trim:</label>
-          <input type='text' name='trim' value={this.state.trim} onChange={this.handleChange}></input><br/>
-          <label>Miles:</label>
-          <input type='text' name='miles' value={this.state.miles} onChange={this.handleChange}></input><br/>
-          <label>VIN:</label>
-          <input type='text' name='vin' value={this.state.vin} onChange={this.handleChange}></input><br/>
-          <button type='submit' onClick={this.handleSubmit}>Add Vehicle</button>
-        </form>
-      </div>
+      <Form>
+        <Form.Field label='Make'>
+          <Input placeholder='Chevy, Toyota, Mercedes...' />
+        </Form.Field>
+        <Form.Field label='Model'>
+          <Input placeholder='Camaro, Corolla, E350...' />
+        </Form.Field>
+        <Form.Field label='Trim'>
+          <Input placeholder='SS, LE, blank...' />
+        </Form.Field>
+        <Form.Field label='Body Style'>
+          <Input placeholder='Coupe, Sedan, Wagon, etc...' />
+        </Form.Field>
+        <Form.Field label='Year'>
+          <Input placeholder='year' />
+        </Form.Field>
+        <Form.Field label='VIN (Vehicle Identification Number)'>
+          <Input placeholder='3FAHP0JG9CR338646' />
+        </Form.Field>
+        <Form.Field label='Miles'>
+          <Input placeholder='miles' />
+        </Form.Field>
+        <Button type='submit' onClick={this.handleSubmit}>Add Vehicle</Button>
+      </Form>
     );
   }
 });
