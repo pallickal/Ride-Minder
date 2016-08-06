@@ -10,6 +10,10 @@ var config = {
     'webpack-dev-server/client?http://localhost:3030',
     APP_DIR + '/index.js'
   ],
+  resolve: {
+    root: [ path.resolve(__dirname, APP_DIR) ],
+    extensions: ['', '.js', '.json', '.jsx']
+  },
   output: {
     path: BUILD_DIR,
     filename: 'bundle.js'

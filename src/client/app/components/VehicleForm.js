@@ -1,6 +1,6 @@
 import React from 'react';
 import { Form, Input, Button } from 'stardust';
-import store from '../store'
+import store from 'store'
 
 store.dispatch({
   type: 'ADD_VEHICLE',
