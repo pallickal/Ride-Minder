@@ -5,7 +5,11 @@ var BUILD_DIR = path.resolve(__dirname, 'src/client/public');
 var APP_DIR = path.resolve(__dirname, 'src/client/app');
 
 var config = {
-  entry: APP_DIR + '/index.js',
+  entry: [
+    'webpack/hot/dev-server',
+    'webpack-dev-server/client?http://localhost:3030',
+    APP_DIR + '/index.js'
+  ],
   output: {
     path: BUILD_DIR,
     filename: 'bundle.js'

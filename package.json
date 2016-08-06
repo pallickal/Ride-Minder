@@ -4,7 +4,9 @@
   "description": "Track your fuel economy. Set a maintenance schedule, and receive reminders when due. Document repairs and service. Plan broader upgrades with a build sheet - showing detailed notes (text and photographs), costs broken down, along with part model/category specific bookmarks for saving useful information like forum posts/vendors. When parts of a build sheet are completed, they are conveniently entered into the build history for a vehicle. Track individual vehicle costs broken down by parts of a build, routine maintenance, repairs, or re-fueling. You may attach photos of receipts to any of these records as documentation.",
   "main": "app/client.js",
   "scripts": {
-    "test": "node_modules/karma-cli/bin/karma start"
+    "dev": "webpack-dev-server --port 3030 --devtool eval --progress --colors --hot --content-base src/client",
+    "build": "node_modules/.bin/webpack",
+    "test": "node_modules/.bin/karma start"
   },
   "author": "Lindsay Pallickal",
   "license": "UNLICENSED",
@@ -22,7 +24,8 @@
     "karma-sourcemap-loader": "^0.3.7",
     "karma-webpack": "^1.7.0",
     "mocha": "^2.5.3",
-    "webpack": "^1.13.1"
+    "webpack": "^1.13.1",
+    "webpack-dev-server": "^1.14.1"
   },
   "dependencies": {
     "react": "^15.2.0",
