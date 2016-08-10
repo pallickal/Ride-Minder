@@ -22,7 +22,7 @@ let Vehicles = React.createClass({
     );
     return (
       <div>
-      <VehicleForm />
+      <VehicleForm onSubmit={ this.props.onSubmitVehicleForm }/>
       <h1>Vehicle List</h1>
       {vehicleNodes}
       {this.props.children}
@@ -37,7 +37,19 @@ const mapVehiclesStateToProps = (state) => {
   }
 };
 
-Vehicles = connect(mapVehiclesStateToProps)(Vehicles);
+const mapVehiclesDispatchToProps = (dispatch) => {
+  return {
+    onSubmitVehicleForm: (event, formState) => {
+      event.preventDefault(); // necessary with no submit url?
+      dispatch({
+        type: 'ADD_VEHICLE',
+        ...formState
+      });
+    }
+  }
+};
+
+Vehicles = connect(mapVehiclesStateToProps, mapVehiclesDispatchToProps)(Vehicles);
 
 const VehicleDetails = React.createClass({
   render: function() {
