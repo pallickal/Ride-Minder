@@ -26,7 +26,10 @@ var config = {
         loader: 'babel'
       }
     ]
-  }
+  },
+  plugins: [
+    new webpack.HotModuleReplacementPlugin()
+  ]
 };
 
 module.exports = config;
