@@ -1,7 +1,7 @@
 import { should } from 'chai';
 var expect = require('chai').expect;
 import deepFreeze from 'deep-freeze';
-import vehicles from './vehicles';
+import vehicles from 'reducers/vehicles';
 
 should();
 
