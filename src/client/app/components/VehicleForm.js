@@ -45,25 +45,25 @@ const VehicleForm = React.createClass({
     return (
       <Form>
         <Form.Field label='Make'>
-          <Input placeholder='Chevy, Toyota, Mercedes...' />
+          <Input name='make' placeholder='Chevy, Toyota, Mercedes...' onChange={this.handleChange} />
         </Form.Field>
         <Form.Field label='Model'>
-          <Input placeholder='Camaro, Corolla, E350...' />
+          <Input name='model' placeholder='Camaro, Corolla, E350...' onChange={this.handleChange} />
         </Form.Field>
         <Form.Field label='Trim'>
-          <Input placeholder='SS, LE, blank...' />
+          <Input name='trim' placeholder='SS, LE, blank...' onChange={this.handleChange} />
         </Form.Field>
         <Form.Field label='Body Style'>
-          <Input placeholder='Coupe, Sedan, Wagon, etc...' />
+          <Input name='body_style' placeholder='Coupe, Sedan, Wagon, etc...' onChange={this.handleChange} />
         </Form.Field>
         <Form.Field label='Year'>
-          <Input placeholder='year' />
+          <Input name='year' placeholder='year' onChange={this.handleChange} />
         </Form.Field>
         <Form.Field label='VIN (Vehicle Identification Number)'>
-          <Input placeholder='3FAHP0JG9CR338646' />
+          <Input name='vin' placeholder='3FAHP0JG9CR338646' onChange={this.handleChange} />
         </Form.Field>
         <Form.Field label='Miles'>
-          <Input placeholder='miles' />
+          <Input name='km' placeholder='miles' onChange={this.handleChange} />
         </Form.Field>
         <Button type='submit' onClick={this.handleSubmit}>Add Vehicle</Button>
       </Form>
