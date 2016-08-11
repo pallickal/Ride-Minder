@@ -1,9 +1,5 @@
-import { should } from 'chai';
-var expect = require('chai').expect;
 import deepFreeze from 'deep-freeze';
 import vehicles from 'reducers/vehicles';
-
-should();
 
 describe('vehicles reducer', function() {
   it('should return default state', function(done) {
