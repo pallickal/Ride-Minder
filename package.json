@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "webpack-dev-server --port 3030 --devtool eval --progress --colors --hot --content-base src/client",
     "build": "node_modules/.bin/webpack",
-    "test": "node_modules/.bin/karma start"
+    "test": "node_modules/.bin/karma start",
+    "test:watch": "npm run test -- --watch"
   },
   "author": "Lindsay Pallickal",
   "license": "UNLICENSED",
@@ -18,15 +19,22 @@
     "babel-register": "^6.9.0",
     "chai": "^3.5.0",
     "deep-freeze": "0.0.1",
+    "enzyme": "^2.4.1",
     "karma": "^1.1.1",
+    "karma-chai": "^0.1.0",
     "karma-chrome-launcher": "^1.0.1",
     "karma-cli": "^1.0.1",
     "karma-mocha": "^1.1.1",
+    "karma-sinon": "^1.0.5",
     "karma-sourcemap-loader": "^0.3.7",
+    "karma-spec-reporter": "0.0.26",
     "karma-webpack": "^1.7.0",
     "mocha": "^2.5.3",
+    "react-addons-test-utils": "^15.3.0",
+    "sinon": "^1.17.5",
     "webpack": "^1.13.1",
-    "webpack-dev-server": "^1.14.1"
+    "webpack-dev-server": "^1.14.1",
+    "yargs": "^4.8.1"
   },
   "dependencies": {
     "react": "^15.2.0",
