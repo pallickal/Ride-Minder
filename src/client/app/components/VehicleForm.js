@@ -38,7 +38,7 @@ const VehicleForm = React.createClass({
           <Input name='vin' placeholder='3FAHP0JG9CR338646' onChange={this.handleChange} />
         </Form.Field>
         <Form.Field label='Miles'>
-          <Input name='km' placeholder='miles' onChange={this.handleChange} />
+          <Input name='miles' placeholder='miles' onChange={this.handleChange} />
         </Form.Field>
         <Button type='submit' onClick={(e) => { this.props.onSubmit(e, this.state) }}>
           Add Vehicle
