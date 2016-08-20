@@ -4,12 +4,12 @@ import { Form, Input, Button } from 'stardust';
 const VehicleForm = React.createClass({
   getInitialState: function() {
     return {
-      name: '',
       year: '',
       make: '',
       model: '',
       trim: '',
       miles: '',
+      body_style: '',
       vin: ''
     };
   },
