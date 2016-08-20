@@ -24,25 +24,25 @@ const VehicleForm = React.createClass({
     return (
       <Form>
         <Form.Field label='Make'>
-          <Input name='make' placeholder='Chevy, Toyota, Mercedes...' onChange={this.handleChange} />
+          <Input name='make' placeholder='Chevy, Toyota, Mercedes...' value={this.state.make} onChange={this.handleChange} />
         </Form.Field>
         <Form.Field label='Model'>
-          <Input name='model' placeholder='Camaro, Corolla, E350...' onChange={this.handleChange} />
+          <Input name='model' placeholder='Camaro, Corolla, E350...' value={this.state.model} onChange={this.handleChange} />
         </Form.Field>
         <Form.Field label='Trim'>
-          <Input name='trim' placeholder='SS, LE, blank...' onChange={this.handleChange} />
+          <Input name='trim' placeholder='SS, LE, blank...' value={this.state.trim} onChange={this.handleChange} />
         </Form.Field>
         <Form.Field label='Body Style'>
-          <Input name='body_style' placeholder='Coupe, Sedan, Wagon, etc...' onChange={this.handleChange} />
+          <Input name='body_style' placeholder='Coupe, Sedan, Wagon, etc...' value={this.state.body_style} onChange={this.handleChange} />
         </Form.Field>
         <Form.Field label='Year'>
-          <Input name='year' placeholder='year' onChange={this.handleChange} />
+          <Input name='year' placeholder='year' value={this.state.year} onChange={this.handleChange} />
         </Form.Field>
         <Form.Field label='VIN (Vehicle Identification Number)'>
-          <Input name='vin' placeholder='3FAHP0JG9CR338646' onChange={this.handleChange} />
+          <Input name='vin' placeholder='3FAHP0JG9CR338646' value={this.state.vin} onChange={this.handleChange} />
         </Form.Field>
         <Form.Field label='Miles'>
-          <Input name='miles' placeholder='miles' onChange={this.handleChange} />
+          <Input name='miles' placeholder='miles' value={this.state.miles} onChange={this.handleChange} />
         </Form.Field>
         <Button type='submit' onClick={ this.handleSubmit }>
           Add Vehicle
