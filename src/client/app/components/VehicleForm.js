@@ -14,7 +14,11 @@ const VehicleForm = React.createClass({
     };
   },
   handleChange: function(e) {
-    this.setState({[e.target.name] : e.target.value})
+    this.setState({[e.target.name] : e.target.value});
+  },
+  handleSubmit: function(e) {
+    this.props.onSubmit(e, this.state);
+    this.setState(this.getInitialState());
   },
   render: function() {
     return (
@@ -40,7 +44,7 @@ const VehicleForm = React.createClass({
         <Form.Field label='Miles'>
           <Input name='miles' placeholder='miles' onChange={this.handleChange} />
         </Form.Field>
-        <Button type='submit' onClick={(e) => { this.props.onSubmit(e, this.state) }}>
+        <Button type='submit' onClick={ this.handleSubmit }>
           Add Vehicle
         </Button>
       </Form>
