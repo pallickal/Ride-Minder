@@ -15,11 +15,11 @@ const vehicles =  (state = [], action) => {
           model: action.model,
           trim: action.trim,
           year: action.year,
-          km: action.km,
+          miles: action.miles,
           fuelings: [
             {
               date: '04/22/2016',
-              km: 57077,
+              miles: 57077,
               currency: 'US',
               units: 'gallons',
               cost_per_unit: 2.73,

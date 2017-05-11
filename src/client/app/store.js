@@ -10,7 +10,7 @@ store.dispatch({
   model: 'Odyssey',
   trim: 'Touring Elite',
   year: 2013,
-  km: 4500
+  miles: 4500
 });
 store.dispatch({
   type: 'ADD_VEHICLE',
@@ -19,7 +19,7 @@ store.dispatch({
   model: 'Outback',
   trim: 'Limited',
   year: 2010,
-  km: 120320
+  miles: 120320
 });
 store.dispatch({
   type: 'ADD_VEHICLE',
@@ -28,7 +28,7 @@ store.dispatch({
   model: 'Accord',
   trim: 'EX',
   year: 2007,
-  km: 138309
+  miles: 138309
 });
 store.dispatch({
   type: 'ADD_VEHICLE',
@@ -37,7 +37,7 @@ store.dispatch({
   model: 'C230 Kompressor',
   trim: '',
   year: 2007,
-  km: 138309
+  miles: 138309
 });
 store.dispatch({
   type: 'ADD_VEHICLE',
@@ -46,7 +46,7 @@ store.dispatch({
   model: 'Integra',
   trim: 'LS',
   year: 1997,
-  km: 57383
+  miles: 57383
 });
 
 export default store;

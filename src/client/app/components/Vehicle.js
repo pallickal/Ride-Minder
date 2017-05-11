@@ -5,7 +5,7 @@ const Vehicle = React.createClass({
     return (
       <div>
         <h2> {this.props.year} {this.props.make} {this.props.model} </h2>
-        {this.props.km} miles
+        {this.props.miles} miles
         <p>{this.props.vin}</p>
       </div>
     );
