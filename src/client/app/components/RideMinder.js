@@ -3,7 +3,6 @@ import { Link } from 'react-router';
 
 const RideMinder = React.createClass({
   render: function() {
-    console.log('in RideMinder component render!!');
     return (
       <div>
         <div>

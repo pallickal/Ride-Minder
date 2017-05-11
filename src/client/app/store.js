@@ -48,6 +48,5 @@ store.dispatch({
   year: 1997,
   km: 57383
 });
-console.log(store.getState());
 
 export default store;

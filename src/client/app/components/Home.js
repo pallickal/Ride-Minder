@@ -2,7 +2,6 @@ import React from 'react';
 
 const Home = React.createClass({
   render: function() {
-    console.log('in Home component render!!');
     return (
       <div>
         Welcome to Ride Minder! A place to track, organize, and plan for the maintenance, repair, and build of your vehicle.
