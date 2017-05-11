@@ -10,9 +10,8 @@ var routes = (
     <Router>
       <Route path="/" component={RideMinder}>
         <IndexRoute component={Home} />
-        <Route path="/vehicle/:_id" component={Vehicle} />
         <Route path="vehicles" component={Vehicles} />
-        <Route path="vehicle" component={Vehicle} />
+        <Route path="/vehicle/:_id" component={Vehicle} />
       </Route>
     </Router>
   </Provider>
