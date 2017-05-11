@@ -5,12 +5,11 @@ const RideMinder = React.createClass({
   render: function() {
     return (
       <div>
-        <div>
-          <Link to="/">Home</Link>
-          <Link to="/vehicles"> Vehicles </Link>
-          <Link to="/create"> Create </Link>
-        </div>
-        Welcome to Ride Minder.
+        <ul>
+          <li><Link to="/">Home</Link></li>
+          <li><Link to="/vehicles"> Vehicles </Link></li>
+          <li><Link to="/vehicles/new"> Add Vehicle </Link></li>
+        </ul>
         {this.props.children}
       </div>
     );
