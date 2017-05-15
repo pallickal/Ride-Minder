@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router';
 
-const RideMinder = React.createClass({
+const Nav = React.createClass({
   render: function() {
     return (
       <div>
@@ -16,4 +16,4 @@ const RideMinder = React.createClass({
   }
 });
 
-export default RideMinder;
+export default Nav;

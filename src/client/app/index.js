@@ -8,7 +8,7 @@ import store from './store.js';
 var routes = (
   <Provider store={store}>
     <Router>
-      <Route path="/" component={RideMinder}>
+      <Route path="/" component={Nav}>
         <IndexRoute component={Home} />
         <Route path="vehicles" component={Vehicles} />
         <Route path="/vehicles/new" component={NewVehicle} />
