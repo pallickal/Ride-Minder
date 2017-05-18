@@ -17,18 +17,7 @@ describe('vehicles reducer', function() {
         model: 'Integra',
         trim: 'LS',
         year: 1997,
-        miles: 57383,
-        fuelings: [
-          {
-            date: '04/22/2016',
-            miles: 57077,
-            currency: 'US',
-            units: 'gallons',
-            cost_per_unit: 2.73,
-            units_volume: 23.47,
-            tank_filled: true
-          }
-        ]
+        miles: 57383
       }
     ];
 
