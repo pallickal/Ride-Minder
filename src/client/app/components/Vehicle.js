@@ -2,30 +2,9 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 let Vehicle = React.createClass({
-  getInitialState () {
-    return {
-      _id: null,
-      currentVehicle: null
-    }
-  },
-  fetchVehicle () {
-    const matchingVehicle = this.props.vehicles.find(
-      (vehicle) => (vehicle.id == this.props.params._id)
-    );
-    this.setState({currentVehicle : matchingVehicle});
-  },
-  componentDidMount () {
-    this.fetchVehicle()
-  },
-  componentDidUpdate (prevProps) {
-    let oldId = prevProps.params._id
-    let newId = this.props.params._id
-    if (newId !== oldId)
-      this.fetchVehicle()
-  },
   render: function() {
-    const vehicle = this.state.currentVehicle;
-    if (!vehicle) return (<div></div>);
+    const vehicle = this.props.vehicle;
+    if (!vehicle) return (<div>Vehicle not found!</div>);
     return (
       <div>
         <h2> {vehicle.year} {vehicle.make} {vehicle.model} </h2>
@@ -40,10 +19,13 @@ let Vehicle = React.createClass({
   }
 });
 
-const mapStateToProps = (state) => {
+const mapStateToProps = (state, parentProps) => {
+  const matchingVehicle = state.find(
+    (vehicle) => (vehicle.id == parentProps.params._id)
+  );
   return {
-    vehicles: state
-  }
+    vehicle: matchingVehicle
+  };
 };
 
 Vehicle = connect(mapStateToProps)(Vehicle);
