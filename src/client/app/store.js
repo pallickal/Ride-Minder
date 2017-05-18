@@ -1,7 +1,7 @@
 import { createStore } from 'redux';
-import vehicles from './reducers/vehicles';
+import app from './reducers/app';
 
-const store = createStore(vehicles);
+const store = createStore(app);
 
 store.dispatch({
   type: 'ADD_VEHICLE',

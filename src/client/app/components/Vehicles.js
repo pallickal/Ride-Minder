@@ -32,7 +32,7 @@ let Vehicles = React.createClass({
 
 const mapStateToProps = (state) => {
   return {
-    vehicles: state
+    vehicles: state.vehicles
   }
 };
 

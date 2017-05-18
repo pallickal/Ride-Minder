@@ -20,7 +20,7 @@ let Vehicle = React.createClass({
 });
 
 const mapStateToProps = (state, parentProps) => {
-  const matchingVehicle = state.find(
+  const matchingVehicle = state.vehicles.find(
     (vehicle) => (vehicle.id == parentProps.params._id)
   );
   return {
