@@ -2,7 +2,7 @@ import React from 'react';
 import { render } from 'react-dom';
 import { Router, Route, IndexRoute } from 'react-router';
 import { Provider } from 'react-redux';
-import { RideMinder, Home, Vehicles, Vehicle, VehicleForm, NewVehicle } from './components.js';
+import { Nav, Home, Vehicles, Vehicle, VehicleForm, NewVehicle } from './components.js';
 import store from './store.js';
 
 var routes = (
